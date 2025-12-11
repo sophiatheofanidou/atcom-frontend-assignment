@@ -1,40 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ATCOM Front-End Assignment</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATCOM Front-End Assignment</title>
 
-  <!-- Main compiled CSS -->
-  <link rel="stylesheet" href="dist/css/main.css" />
-</head>
-<body>
-    
+    <!-- Main compiled CSS -->
+    <link rel="stylesheet" href="dist/css/main.css" />
+  </head>
+  <body>
     <!-- Skip link for accessibility -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header class="site-header">
-        <div class="container site-header__inner">
+      <div class="container site-header__inner">
         <h1 class="site-header__title">Browse everything.</h1>
-        </div>
+      </div>
     </header>
 
-   <main id="main-content" class="site-main">
+    <main id="main-content" class="site-main">
+      <section
+        class="section section--features"
+        aria-labelledby="see-the-big-picture-title"
+      >
+        <div class="container section__inner">
+          <header class="section__header">
+            <h2 id="see-the-big-picture-title" class="section__title">
+              See the Big Picture
+            </h2>
+            <p class="section__subtitle">
+              Area turns your data into clear, vibrant visuals that show you
+              exactly what's happening in each region.
+            </p>
+          </header>
+          <div class="section__content">
+            <div class="features">
+              <div class="features__content">
+                <ul class="features__list">
+                  <li class="features__item">
+                    <span class="features__item-index">01</span>
+                    <p class="features__item-text">
+                      Spot Trends in Seconds: No more digging through numbers.
+                    </p>
+                  </li>
+                  <li class="features__item">
+                    <span class="features__item-index">02</span>
+                    <p class="features__item-text">
+                      Get Everyone on the Same Page: Share easy-to-understand
+                      reports with your team.
+                    </p>
+                  </li>
+                  <li class="features__item">
+                    <span class="features__item-index">03</span>
+                    <p class="features__item-text">
+                      Make Presentations Pop: Interactive maps and dashboards
+                      keep your audience engaged.
+                    </p>
+                  </li>
+                  <li class="features__item">
+                    <span class="features__item-index">04</span>
+                    <p class="features__item-text">
+                      Your Global Snapshot: Get a quick, clear overview of your
+                      entire operation.
+                    </p>
+                  </li>
+                </ul>
+                <div class="features__actions">
+                  <a class="button button--primary" href="#"> Discover More </a>
+                </div>
+              </div>
 
-      <!-- See the Big Picture (Features Carousel) -->
+              <div class="features__media">
+                <div
+                  class="swiper features-carousel__swiper"
+                  aria-label="Feature previews"
+                >
+                  <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide features-carousel__slide">
+                      <img
+                        src="src/images/feature-slide-1-cylinders.png"
+                        alt="Abstract Images with White Cylinders"
+                        class="features-carousel__image"
+                      />
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide features-carousel__slide">
+                      <img
+                        src="src/images/feature-slide-2-keyboard.png"
+                        alt="Beige Mechanical Keyboard"
+                        class="features-carousel__image"
+                      />
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide features-carousel__slide">
+                      <img
+                        src="src/images/feature-slide-3-leaf.png"
+                        alt="Close-up of a Green Leaf"
+                        class="features-carousel__image"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Controls -->
+                  <div class="features-carousel__controls">
+                    <!-- Prev -->
+                    <button
+                      class="features-carousel__control features-carousel__control--prev"
+                      type="button"
+                      aria-label="Previous feature"
+                    >
+                      <svg
+                        class="features-carousel__icon"
+                        viewBox="0 0 5 10"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path d="M5 0L0 5L5 10V0Z" />
+                      </svg>
+                    </button>
+
+                    <!-- Next -->
+                    <button
+                      class="features-carousel__control features-carousel__control--next"
+                      type="button"
+                      aria-label="Next feature"
+                    >
+                      <svg
+                        class="features-carousel__icon"
+                        viewBox="0 0 5 10"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path d="M0 0L5 5L0 10V0Z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Why Choose Area (Specifications Table) -->
 
       <!-- Map Your Success (How It Works) -->
-
     </main>
 
     <footer class="site-footer">
       <div class="container site-footer__inner">
-        <p class="site-footer__text">© 2025 Area</p>
+        <p class="site-footer__text">© 2025 Area. All rights reserved.</p>
       </div>
     </footer>
 
-  <script src="src/js/main.js"></script>
-</body>
+    <script src="src/js/main.js"></script>
+  </body>
 </html>
