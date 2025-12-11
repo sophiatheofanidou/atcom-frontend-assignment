@@ -1,0 +1,30 @@
+// ======================================
+// COMPONENTS
+// Buttons
+// ======================================
+
+// Figma: DM Sans Bold 14px, Pill-shape
+// Χρησιμοποιούμε τα color tokens από τα variables (primary = CTA green)
+
+.button {
+  display: inline-block;
+  padding-inline: 1.5rem;
+  padding-block: 0.75rem;
+  border-radius: $radius-pill;
+  background-color: $color-primary;        // default button background
+  color: $color-text;
+  font-family: $font-family-body;
+  font-size: $font-size-button;
+  line-height: $line-height-button;
+  letter-spacing: $letter-spacing-button;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-hover;
+    color: #ffffff; // white text on hover for contrast
+    text-decoration: none; // prevent underline
+  }
+}

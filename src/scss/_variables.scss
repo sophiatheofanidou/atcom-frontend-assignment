@@ -1,0 +1,141 @@
+// ======================================
+// COLOR SYSTEM
+// ======================================
+
+// Page background & surface
+$color-bg: #ffffff;        // από Desktop frame → Background #FFFFFF
+$color-surface: #ffffff;   // ίδιο με το bg για cards/sections
+
+// Text
+$color-text: #000000;      // headings & κύριο text (μετρημένο από Figma)
+$color-text-muted: #6f6f6f; // paragraphs / δευτερεύον text (#6F6F6F)
+
+// Borders
+$color-border-subtle: #e9e9e9; // dividers & γραμμές λίστας (#E9E9E9)
+$color-border-light: #cecece;  // εξωτερικά borders containers (#CECECE)
+
+// Buttons (CTA "Discover More")
+$color-primary: #dfecc6;       // default background του button
+$color-primary-hover: #8e9c78; // hover background
+$color-primary-accent: #485c11; // dark green για labels ("Specs") & accents
+
+// Soft accent (ίδιο με primary default, αλλά κρατάμε ξεχωριστή έννοια)
+$color-accent-soft: #dfecc6;
+
+
+// ======================================
+// TYPOGRAPHY
+// (όλα προέρχονται από Figma Text styles)
+// ======================================
+
+// Font families
+$font-family-heading: "Crimson Text", serif;
+$font-family-body: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+  "Segoe UI", sans-serif;
+$font-family-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+  Consolas, "Liberation Mono", "Courier New", monospace;
+
+// Global root size (για rem)
+$font-size-root: 16px; // 1rem = 16px
+
+// Headings (Crimson Text)
+$font-size-h1: 10rem;         // 160px
+$line-height-h1: 0.85;        // 85%
+$letter-spacing-h1: -0.05em;  // -5%
+
+$font-size-h2: 3.75rem;       // 60px
+$line-height-h2: 0.9;         // 90%
+$letter-spacing-h2: -0.03em;  // -3%
+
+$font-size-h3: 1.125rem;      // 18px
+$line-height-h3: 1;           // 100%
+$letter-spacing-h3: -0.03em;  // -3%
+
+// Body paragraph (DM Sans 15px)
+$font-size-body: 0.9375rem;       // 15px
+$line-height-body: 1.4;           // 140%
+$letter-spacing-body: -0.005em;   // -0.5%
+
+// Meta text (eyebrow label, table list items, footer)
+// Roboto Mono 12px
+$font-size-meta: 0.75rem;         // 12px
+$line-height-meta: 1.4;           // 140%
+$letter-spacing-meta: -0.01em;    // -1%
+$font-family-meta: $font-family-mono;
+
+// Button text (DM Sans 14px Bold)
+$font-size-button: 0.875rem;      // 14px
+$line-height-button: 1.4;         // 140%
+$letter-spacing-button: -0.025em; // -2.5%
+$font-weight-button: 700;
+
+// Ordered-list step numbers (01, 02, 03 → How it works)
+$font-size-step-number: 5rem;         // 80px
+$line-height-step-number: 1;          // 100%
+$letter-spacing-step-number: -0.04em; // -4%
+$font-weight-step-number: 400;
+
+// Unordered-list indexes (01–04 → Features list)
+$font-size-list-index: 0.9375rem;       // 15px
+$line-height-list-index: 1.4;           // 140%
+$letter-spacing-list-index: -0.005em;   // -0.5%
+$font-weight-list-index: 700;           // Bold
+
+// Table heading (Area / WebSurge / HyperView)
+$font-size-table-heading: 1.6rem;          // ~25.7px
+$line-height-table-heading: 1.2;           // 120%
+$letter-spacing-table-heading: -0.08em;    // -8%
+$font-weight-table-heading: 500;           // Medium
+
+
+// ======================================
+// LAYOUT
+// ======================================
+
+// Από το Desktop frame:
+// Width: 1280px, Padding Left/Right: 40px
+// → content width = 1280 - 40 - 40 = 1200px
+$container-max-width: 1200px;
+$container-padding-inline: 2.5rem; // 
+
+// ======================================
+// BORDER RADIUS
+// ======================================
+
+// Χρησιμοποιείται για τα buttons.
+// Το 9999px είναι industry standard τιμή για τέλειο pill shape 
+// (το actual radius προσαρμόζεται στο ύψος του στοιχείου).
+$radius-pill: 9999px;
+
+
+// ======================================
+// SPACING SCALE
+// (δικό μου system για να πλησιάσω τα 40/80px του Figma
+// χωρίς να γεμίσω magic numbers στο CSS)
+// ======================================
+
+$space-xs: 0.5rem;   // 8px
+$space-sm: 0.75rem;  // 12px
+$space-md: 1rem;     // 16px
+$space-lg: 1.5rem;   // 24px
+$space-xl: 2rem;     // 32px
+$space-xxl: 3rem;    // 48px
+$space-xxxl: 5rem;   // 80px (π.χ. μεγάλα section paddings)
+
+
+// ======================================
+// BREAKPOINTS
+// (με βάση τα Figma frames + industry standards)
+// ======================================
+
+// Mobile-first default: < 480px
+$breakpoint-sm: 480px;  // πάνω από πολύ μικρά κινητά
+
+// Tablet portrait range, επηρεασμένο από το Tablet frame (~834px)
+$breakpoint-md: 768px;
+
+// Μικρό desktop / tablet landscape
+$breakpoint-lg: 1024px;
+
+// Μεγάλο desktop, ευθυγραμμισμένο με το Desktop frame πλάτους 1280px
+$breakpoint-xl: 1280px;
