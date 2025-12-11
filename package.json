@@ -1,0 +1,25 @@
+{
+  "name": "atcom-frontend-assignment",
+  "version": "1.0.0",
+  "description": "Implementation of three sections from the provided Figma design:",
+  "main": "index.js",
+  "scripts": {
+    "sass:dev": "sass --watch src/scss/main.scss dist/css/main.css",
+    "sass:build": "sass --style=compressed src/scss/main.scss dist/css/main.css",
+    "start": "npm run sass:dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sophiatheofanidou/atcom-frontend-assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sophiatheofanidou/atcom-frontend-assignment/issues"
+  },
+  "homepage": "https://github.com/sophiatheofanidou/atcom-frontend-assignment#readme",
+  "devDependencies": {
+    "sass": "^1.96.0"
+  }
+}
