@@ -5,9 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ATCOM Front-End Assignment</title>
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=DM+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS (library styles) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
     <!-- Main compiled CSS -->
     <link rel="stylesheet" href="dist/css/main.css" />
   </head>
+
   <body>
     <!-- Skip link for accessibility -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -19,57 +35,64 @@
     </header>
 
     <main id="main-content" class="site-main">
+      <!-- See the Big Picture (Features Carousel) -->
       <section
         class="section section--features"
         aria-labelledby="see-the-big-picture-title"
       >
         <div class="container section__inner">
-          <header class="section__header">
-            <h2 id="see-the-big-picture-title" class="section__title">
-              See the Big Picture
-            </h2>
-            <p class="section__subtitle">
-              Area turns your data into clear, vibrant visuals that show you
-              exactly what's happening in each region.
-            </p>
-          </header>
           <div class="section__content">
             <div class="features">
-              <div class="features__content">
-                <ul class="features__list">
-                  <li class="features__item">
-                    <span class="features__item-index">01</span>
-                    <p class="features__item-text">
-                      Spot Trends in Seconds: No more digging through numbers.
-                    </p>
-                  </li>
-                  <li class="features__item">
-                    <span class="features__item-index">02</span>
-                    <p class="features__item-text">
-                      Get Everyone on the Same Page: Share easy-to-understand
-                      reports with your team.
-                    </p>
-                  </li>
-                  <li class="features__item">
-                    <span class="features__item-index">03</span>
-                    <p class="features__item-text">
-                      Make Presentations Pop: Interactive maps and dashboards
-                      keep your audience engaged.
-                    </p>
-                  </li>
-                  <li class="features__item">
-                    <span class="features__item-index">04</span>
-                    <p class="features__item-text">
-                      Your Global Snapshot: Get a quick, clear overview of your
-                      entire operation.
-                    </p>
-                  </li>
-                </ul>
-                <div class="features__actions">
-                  <a class="button" href="#">Discover More</a>
+              <!-- Left column (matches Figma "Text" group) -->
+              <div class="features__text">
+                <header class="section__header">
+                  <h2 id="see-the-big-picture-title" class="section__title">
+                    See the Big Picture
+                  </h2>
+                  <p class="section__subtitle">
+                    Area turns your data into clear, vibrant visuals that show
+                    you exactly what's happening in each region.
+                  </p>
+                </header>
+
+                <div class="features__content">
+                  <ul class="features__list">
+                    <li class="features__item">
+                      <span class="features__item-index">01</span>
+                      <p class="features__item-text">
+                        Spot Trends in Seconds: No more digging through numbers.
+                      </p>
+                    </li>
+                    <li class="features__item">
+                      <span class="features__item-index">02</span>
+                      <p class="features__item-text">
+                        Get Everyone on the Same Page: Share easy-to-understand
+                        reports with your team.
+                      </p>
+                    </li>
+                    <li class="features__item">
+                      <span class="features__item-index">03</span>
+                      <p class="features__item-text">
+                        Make Presentations Pop: Interactive maps and dashboards
+                        keep your audience engaged.
+                      </p>
+                    </li>
+                    <li class="features__item">
+                      <span class="features__item-index">04</span>
+                      <p class="features__item-text">
+                        Your Global Snapshot: Get a quick, clear overview of
+                        your entire operation.
+                      </p>
+                    </li>
+                  </ul>
+
+                  <div class="features__actions">
+                    <a class="button" href="#">Discover More</a>
+                  </div>
                 </div>
               </div>
 
+              <!-- Right column (carousel/media) -->
               <div class="features__media">
                 <div
                   class="swiper features-carousel__swiper"
@@ -140,9 +163,13 @@
                   </div>
                 </div>
               </div>
+              <!-- /Right column -->
             </div>
+            <!-- /features -->
           </div>
+          <!-- /section__content -->
         </div>
+        <!-- /container -->
       </section>
 
       <!-- Why Choose Area (Specifications Table) -->
@@ -448,6 +475,8 @@
       </div>
     </footer>
 
+    <!-- main JS -->
     <script src="src/js/main.js"></script>
+
   </body>
 </html>

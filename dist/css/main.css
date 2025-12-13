@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -98,20 +99,13 @@ textarea {
 .section {
   padding-block: 5rem;
 }
-.section__inner {
-  width: 100%;
-}
-.section__header {
-  margin-bottom: 2rem;
-}
-.section__actions {
-  margin-top: 1rem;
-}
+
 .site-header__title {
   font-family: "Crimson Text", serif;
   font-size: 10rem;
   line-height: 0.85;
   letter-spacing: -0.05em;
+  margin: 3rem 0 3rem;
 }
 
 .section__title {
@@ -220,6 +214,154 @@ p {
   background-color: #8e9c78;
   color: #ffffff;
   text-decoration: none;
+}
+
+/* =====================================================
+   Features Carousel Section
+   ===================================================== */
+.section--features {
+  padding-block: 5rem; /* 80px */
+}
+
+/* -----------------------------------------------------
+   Two-column layout
+----------------------------------------------------- */
+.section--features .features {
+  display: flex;
+  gap: 1.25rem; /* 20px */
+  align-items: flex-start;
+}
+
+.section--features .features__text,
+.section--features .features__media {
+  flex: 1 1 0;
+}
+
+.section--features .features__media {
+  min-width: 0; /* critical for flex overflow fix */
+}
+
+/* -----------------------------------------------------
+   Left column – Text group
+----------------------------------------------------- */
+.section--features .features__text {
+  padding-top: 3.75rem; /* 60px */
+  padding-bottom: 5rem; /* 80px */
+  border-top: 1px solid #e9e9e9;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* 40px */
+}
+
+.section--features .section__header {
+  padding-right: 5rem; /* 80px */
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* 40px */
+  margin: 0;
+}
+
+.section--features .features__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* 40px */
+}
+
+/* -----------------------------------------------------
+   Features list
+----------------------------------------------------- */
+.section--features .features__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section--features .features__item {
+  display: flex;
+  gap: 1.875rem; /* 30px */
+  padding: 1.25rem 5rem 1.25rem 0; /* 20px top/bottom, 80px right */
+  border-top: 1px solid #e9e9e9;
+}
+
+.section--features .features__item-index {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  font-weight: 700;
+  color: #6f6f6f;
+  flex-shrink: 0;
+}
+
+.section--features .features__item-text {
+  margin: 0;
+  color: #000;
+}
+
+/* -----------------------------------------------------
+   CTA
+----------------------------------------------------- */
+.section--features .features__actions {
+  margin-top: 0; /* gap handled by parent */
+}
+
+/* -----------------------------------------------------
+   Right column – Swiper carousel
+----------------------------------------------------- */
+.section--features .features-carousel__swiper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 44.4375rem; /* 711px */
+  border-radius: 1.875rem; /* 30px */
+  overflow: hidden;
+}
+
+/* Height chain – absolutely required */
+.section--features .features-carousel__swiper .swiper-wrapper,
+.section--features .features-carousel__swiper .swiper-slide {
+  height: 100%;
+}
+
+/* Image */
+.section--features .features-carousel__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* -----------------------------------------------------
+   Carousel controls
+----------------------------------------------------- */
+.section--features .features-carousel__controls {
+  position: absolute;
+  top: 1.875rem; /* 30px */
+  right: 1.875rem; /* 30px */
+  display: flex;
+  gap: 0.625rem; /* 10px */
+  z-index: 2;
+}
+
+.section--features .features-carousel__control {
+  width: 2.5rem; /* 40px */
+  height: 2.5rem;
+  background: #ffffff;
+  border-radius: 0.625rem; /* 10px */
+  border: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.section--features .features-carousel__icon {
+  width: 0.3125rem; /* 5px */
+  height: 0.625rem; /* 10px */
+  fill: #000000;
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

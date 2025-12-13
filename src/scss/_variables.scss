@@ -96,7 +96,11 @@ $font-weight-table-heading: 500;           // Medium
 // Width: 1280px, Padding Left/Right: 40px
 // → content width = 1280 - 40 - 40 = 1200px
 $container-max-width: 1200px;
-$container-padding-inline: 2.5rem; // 
+$container-padding-inline: 2.5rem; // 40px
+
+// Από τα main sections (Features / Specs / How it works)
+// padding-bottom: 120px → 7.5rem
+$section-padding-bottom: 7.5rem;
 
 // ======================================
 // BORDER RADIUS
