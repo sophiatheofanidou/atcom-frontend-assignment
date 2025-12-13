@@ -11,20 +11,44 @@
   padding-inline: 1.5rem;
   padding-block: 0.75rem;
   border-radius: $radius-pill;
-  background-color: $color-primary;        // default button background
+
+  background-color: $color-primary;
   color: $color-text;
+
   font-family: $font-family-body;
   font-size: $font-size-button;
   line-height: $line-height-button;
   letter-spacing: $letter-spacing-button;
   font-weight: 700;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
 
-  &:hover,
-  &:focus {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  // Hover (mouse only)
+  &:hover {
     background-color: $color-primary-hover;
-    color: #ffffff; // white text on hover for contrast
-    text-decoration: none; // prevent underline
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  // Keyboard focus (WCAG visible focus)
+  &:focus-visible {
+    background-color: $color-primary-hover;
+    color: #ffffff;
+
+    // Focus ring (independent of text color)
+    outline: none; // override global outline
+    outline: 2px solid $color-focus;
+    text-decoration: none;
+  }
+
+  // Prevent focus styles on mouse click
+  &:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
   }
 }
+

@@ -23,6 +23,8 @@ $color-primary-accent: #485c11; // dark green για labels ("Specs") & accents
 $color-accent-soft: #dfecc6;
 
 
+$color-focus: #0b5fff; 
+
 // ======================================
 // TYPOGRAPHY
 // (όλα προέρχονται από Figma Text styles)
@@ -112,7 +114,6 @@ $section-padding-bottom: 7.5rem;
 
 // Χρησιμοποιείται για τα buttons.
 // Το 9999px είναι industry standard τιμή για τέλειο pill shape 
-// (το actual radius προσαρμόζεται στο ύψος του στοιχείου).
 $radius-pill: 9999px;
 
 

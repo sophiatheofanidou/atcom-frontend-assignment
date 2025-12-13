@@ -153,6 +153,11 @@
   display: block;
 }
 
+.features-carousel__control:focus-visible {
+  outline: 2px solid $color-focus;
+  outline-offset: 3px;
+}
+
 
 /* =====================================================
    Specs Section (Section 2 – Specifications Table)
