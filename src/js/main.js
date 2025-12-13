@@ -11,21 +11,29 @@
     "(prefers-reduced-motion: reduce)"
   )?.matches;
 
+  // Keep references so we can update on resize (Firefox stability)
+  const instances = [];
+
+  // Small debounce helper (no external deps)
+  const debounce = (fn, delay = 150) => {
+    let t;
+    return (...args) => {
+      window.clearTimeout(t);
+      t = window.setTimeout(() => fn(...args), delay);
+    };
+  };
+
   roots.forEach((root) => {
     // Prevent double initialization on the same element
     if (root.swiper) return;
 
-    const prevBtn = root.querySelector(
-      ".features-carousel__control--prev"
-    );
-    const nextBtn = root.querySelector(
-      ".features-carousel__control--next"
-    );
+    const prevBtn = root.querySelector(".features-carousel__control--prev");
+    const nextBtn = root.querySelector(".features-carousel__control--next");
 
     // Guard: if navigation buttons are missing, do nothing
     if (!prevBtn || !nextBtn) return;
 
-    new Swiper(root, {
+    const swiper = new Swiper(root, {
       slidesPerView: 1,
       spaceBetween: 0,
       loop: true,
@@ -38,6 +46,11 @@
       // Basic UX enhancements
       grabCursor: true,
       watchOverflow: true,
+
+      // Οbserve layout changes (helps when flex row -> column)
+      observer: true,
+      observeParents: true,
+      resizeObserver: true,
 
       // Enable keyboard navigation
       keyboard: {
@@ -60,5 +73,21 @@
         nextEl: nextBtn,
       },
     });
+
+    instances.push(swiper);
   });
+
+  // Οn resize, force Swiper to recalc sizes (Firefox huge-width bug)
+  const onResize = debounce(() => {
+    instances.forEach((swiper) => {
+      if (!swiper || swiper.destroyed) return;
+
+      swiper.update();
+
+      // settle the active slide without animation (prevents weird transforms)
+      swiper.slideTo(swiper.activeIndex, 0);
+    });
+  }, 150);
+
+  window.addEventListener("resize", onResize, { passive: true });
 })();

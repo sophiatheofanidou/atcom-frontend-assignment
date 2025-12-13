@@ -111,6 +111,18 @@
   height: 100%;
 }
 
+/* -----------------------------------------------------
+   Swiper width guard (Firefox resize stability)
+----------------------------------------------------- */
+.section--features .features-carousel__swiper .swiper-wrapper {
+  width: 100%;
+}
+
+.section--features .features-carousel__swiper .swiper-slide {
+  width: 100% !important; /* overrides Swiper inline width values */
+}
+
+
 /* Image */
 .section--features .features-carousel__image {
   width: 100%;
@@ -156,6 +168,83 @@
 .features-carousel__control:focus-visible {
   outline: 2px solid $color-focus;
   outline-offset: 3px;
+}
+
+/* =====================================================
+   Responsive patches
+   ===================================================== */
+
+/* Mobile: < md (e.g. < 768px) */
+@media (max-width: ($breakpoint-md - 1px)) {
+  .section--features {
+    padding-block: $space-xxl; /* 48px αντί για 80px */
+  }
+
+  .section--features .features {
+    flex-direction: column;
+    gap: $space-xl; /* 32px */
+  }
+
+  .section--features .features__text {
+    padding-top: $space-lg;      /* 24px */
+    padding-bottom: $space-xl;   /* 32px */
+    gap: $space-xl;              /* 32px */
+  }
+
+  .section--features .section__header {
+    padding-right: 0; /* remove 80px right padding on mobile */
+    gap: $space-lg;   /* 24px */
+  }
+
+  .section--features .features__content {
+    gap: $space-lg; /* 24px */
+  }
+
+  .section--features .features__item {
+    padding: $space-md 0; /* 16px 0 */
+    gap: $space-lg;       /* 24px */
+  }
+
+  .section--features .features-carousel__swiper {
+    height: clamp(22rem, 70vw, 32rem);
+    border-radius: 1.25rem; /* 20px */
+  }
+
+  .section--features .features-carousel__controls {
+    top: $space-md;   /* 16px */
+    right: $space-md; /* 16px */
+    gap: $space-sm;   /* 12px */
+  }
+
+  .section--features .features-carousel__control {
+    width: 2.25rem;  /* 36px */
+    height: 2.25rem;
+    border-radius: 0.5rem; /* 8px */
+  }
+}
+
+/* Tablet: md .. < lg (e.g. 768px - 1023px) */
+@media (min-width: $breakpoint-md) and (max-width: ($breakpoint-lg - 1px)) {
+  .section--features {
+    padding-block: 5rem; /* keep 80px feel on tablet */
+  }
+
+  .section--features .features {
+    flex-direction: column;
+    gap: $space-xxl; /* 48px */
+  }
+
+  .section--features .section__header {
+    padding-right: 0; /* stacked tablet design */
+  }
+
+  .section--features .features__item {
+    padding-right: 0; /* avoid desktop-only 80px gutter */
+  }
+
+  .section--features .features-carousel__swiper {
+    height: clamp(30rem, 60vw, 38rem);
+  }
 }
 
 
