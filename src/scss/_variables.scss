@@ -35,6 +35,10 @@ $font-family-body: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
 $font-family-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
   Consolas, "Liberation Mono", "Courier New", monospace;
 
+// Alt sans font (Specs headers columns 2–3)
+$font-family-sans-alt: "Rethink Sans", system-ui, -apple-system, BlinkMacSystemFont,
+  "Segoe UI", sans-serif;
+
 // Global root size (για rem)
 $font-size-root: 16px; // 1rem = 16px
 

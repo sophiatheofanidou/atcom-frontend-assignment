@@ -129,7 +129,6 @@ textarea {
   font-size: 0.75rem;
   line-height: 1.4;
   letter-spacing: -0.01em;
-  text-transform: uppercase;
   color: #485c11;
 }
 
@@ -163,6 +162,17 @@ p {
   letter-spacing: -0.08em;
   font-weight: 500;
   color: #000000;
+}
+
+/* Specs table column headers — match Figma per column */
+.section--specs .specs__row--head th:first-child {
+  font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #000000;
+}
+
+.section--specs .specs__row--head th:not(:first-child) {
+  font-family: "Rethink Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #6f6f6f; /* #6F6F6F */
 }
 
 .specs__feature-text {
@@ -362,6 +372,190 @@ p {
   height: 0.625rem; /* 10px */
   fill: #000000;
   display: block;
+}
+
+/* =====================================================
+   Specs Section (Section 2 – Specifications Table)
+   ===================================================== */
+.section--specs {
+  padding-block: 0;
+}
+
+/* Figma layout: Content + Table with gap 20px */
+.section--specs .section__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+}
+
+/* -----------------------------------------------------
+   Header
+----------------------------------------------------- */
+.section--specs .section__header {
+  max-width: 75rem; /* 1200px */
+  margin-inline: auto;
+  padding: 5rem 15rem; /* 80px 240px */
+  border-top: 1px solid #cecece;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem; /* 40px */
+  margin: 0;
+}
+
+.section--specs .section__eyebrow,
+.section--specs .section__title,
+.section--specs .section__subtitle {
+  max-width: 45rem; /* 720px */
+  margin: 0;
+}
+
+.section--specs .section__actions {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+/* -----------------------------------------------------
+   Table wrapper
+----------------------------------------------------- */
+.section--specs .section__content {
+  margin: 0;
+}
+
+.section--specs .specs__table-wrapper {
+  position: relative;
+}
+
+/* Column 1 card overlay (desktop pixel-perfect: 400px) */
+.section--specs .specs__table-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 25rem; /* 400px */
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  border-radius: 1.25rem; /* 20px */
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.0784313725);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section--specs .specs__table {
+  width: 100%;
+  min-width: 75rem; /* 1200px (desktop lock; responsive on Day 6) */
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* -----------------------------------------------------
+   Header row (Area / WebSurge / HyperView)
+----------------------------------------------------- */
+.section--specs .specs__row--head th {
+  height: 6rem; /* 96px */
+  padding: 2.5rem 1.875rem; /* 40px 30px */
+  vertical-align: middle;
+  border-bottom: 1px solid #cecece;
+  background: transparent;
+  text-align: center; /* hard centering */
+}
+
+.section--specs .specs__header-inner {
+  display: inline-block; /* centers via th text-align */
+}
+
+/* Column 1 header typography */
+.section--specs .specs__row--head th:first-child .specs__header-inner {
+  font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  letter-spacing: -0.08em;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Column 2 & 3 header typography */
+.section--specs .specs__row--head th:not(:first-child) .specs__header-inner {
+  font-family: "Rethink Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; /* Rethink Sans */
+  font-size: 1.6rem;
+  line-height: 1.2;
+  letter-spacing: -0.08em;
+  font-weight: 500;
+  color: #6f6f6f;
+}
+
+/* -----------------------------------------------------
+   Body cells
+----------------------------------------------------- */
+.section--specs .specs__cell {
+  height: 5.0625rem; /* 81px */
+  padding: 2rem 1.875rem; /* 32px 30px */
+  vertical-align: middle;
+  background: transparent;
+}
+
+/* Horizontal dividers (columns 2–3 only) */
+.section--specs .specs__body td:not(:first-child) {
+  border-bottom: 0.5px solid #e9e9e9;
+}
+
+/* Internal dividers inside column 1 card */
+.section--specs .specs__body tr:not(:last-child) td:first-child {
+  box-shadow: inset 0 -0.5px 0 #e9e9e9;
+}
+
+/* Column 3 left divider */
+.section--specs .specs__body td:nth-child(3) {
+  border-left: 0.5px solid #e9e9e9;
+}
+
+/* Figma exception: last row, column 3 has no bottom border */
+.section--specs .specs__body tr:last-child td:nth-child(3) {
+  border-bottom: 0;
+}
+
+/* -----------------------------------------------------
+   Cell content (icon + text)
+----------------------------------------------------- */
+.section--specs .specs__cell-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 8px */
+}
+
+/* Icons (SVG mask) */
+.section--specs .specs__icon {
+  width: 0.875rem; /* 14px */
+  height: 0.875rem;
+  flex-shrink: 0;
+  display: inline-block;
+  background-color: #6f6f6f;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.section--specs .specs__icon--check {
+  -webkit-mask-image: url("../../src/images/icons/check.svg");
+  mask-image: url("../../src/images/icons/check.svg");
+}
+
+.section--specs .specs__icon--cross {
+  -webkit-mask-image: url("../../src/images/icons/cross.svg");
+  mask-image: url("../../src/images/icons/cross.svg");
+}
+
+/* Column 1 icons are green */
+.section--specs .specs__body td:first-child .specs__icon {
+  background-color: #485c11;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -41,7 +41,6 @@
   font-size: $font-size-meta;
   line-height: $line-height-meta;
   letter-spacing: $letter-spacing-meta;
-  text-transform: uppercase;
   color: $color-primary-accent;
 }
 
@@ -92,6 +91,18 @@ p {
   font-weight: $font-weight-table-heading;
   color: $color-text;
 }
+
+/* Specs table column headers — match Figma per column */
+.section--specs .specs__row--head th:first-child {
+  font-family: $font-family-body;
+  color: $color-text;
+}
+
+.section--specs .specs__row--head th:not(:first-child) {
+  font-family: $font-family-sans-alt;
+  color: $color-text-muted; /* #6F6F6F */
+}
+
 
 // Table list items (Ultra-fast browsing, Fast browsing, κ.λπ.)
 // Figma: Roboto Mono 12px, 140%, -1%

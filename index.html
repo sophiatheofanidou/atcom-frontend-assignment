@@ -6,11 +6,11 @@
     <title>ATCOM Front-End Assignment</title>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=DM+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=DM+Sans:wght@400;500;700&family=Roboto+Mono:wght@400&family=Rethink+Sans:wght@400;500&display=swap"
       rel="stylesheet"
     />
 
@@ -102,7 +102,7 @@
                     <!-- Slide 1 -->
                     <div class="swiper-slide features-carousel__slide">
                       <img
-                        src="src/images/feature-slide-1-cylinders.png"
+                        src="src/images/carousel/feature-slide-1-cylinders.png"
                         alt="Abstract Images with White Cylinders"
                         class="features-carousel__image"
                       />
@@ -111,7 +111,7 @@
                     <!-- Slide 2 -->
                     <div class="swiper-slide features-carousel__slide">
                       <img
-                        src="src/images/feature-slide-2-keyboard.png"
+                        src="src/images/carousel/feature-slide-2-keyboard.png"
                         alt="Beige Mechanical Keyboard"
                         class="features-carousel__image"
                       />
@@ -120,7 +120,7 @@
                     <!-- Slide 3 -->
                     <div class="swiper-slide features-carousel__slide">
                       <img
-                        src="src/images/feature-slide-3-leaf.png"
+                        src="src/images/carousel/feature-slide-3-leaf.png"
                         alt="Close-up of a Green Leaf"
                         class="features-carousel__image"
                       />
@@ -200,25 +200,22 @@
             <div class="specs">
               <div class="specs__table-wrapper">
                 <table class="specs__table">
+                  <colgroup>
+                    <col style="width: 400px" />
+                    <col style="width: 400px" />
+                    <col style="width: 400px" />
+                  </colgroup>
+
                   <thead class="specs__head">
                     <tr class="specs__row specs__row--head">
-                      <th
-                        scope="col"
-                        class="specs__header specs__header--product"
-                      >
-                        Area
+                      <th scope="col" class="specs__header">
+                        <span class="specs__header-inner">Area</span>
                       </th>
-                      <th
-                        scope="col"
-                        class="specs__header specs__header--product"
-                      >
-                        WebSurge
+                      <th scope="col" class="specs__header">
+                        <span class="specs__header-inner">WebSurge</span>
                       </th>
-                      <th
-                        scope="col"
-                        class="specs__header specs__header--product"
-                      >
-                        HyperView
+                      <th scope="col" class="specs__header">
+                        <span class="specs__header-inner">HyperView</span>
                       </th>
                     </tr>
                   </thead>
@@ -226,177 +223,168 @@
                   <tbody class="specs__body">
                     <tr class="specs__row">
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--check"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Ultra-fast browsing
-                        </span>
+                        <div class="specs__cell-content">
+                          <span
+                            class="specs__icon specs__icon--check"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="specs__feature-text"
+                            >Ultra-fast browsing</span
+                          >
+                        </div>
                       </td>
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--check"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text"> Fast browsing </span>
+                        <div class="specs__cell-content">
+                          <span
+                            class="specs__icon specs__icon--check"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="specs__feature-text">Fast browsing</span>
+                        </div>
                       </td>
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--cross"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Moderate speeds
-                        </span>
-                      </td>
-                    </tr>
-
-                    <tr class="specs__row">
-                      <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--check"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Advanced AI insights
-                        </span>
-                      </td>
-                      <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--check"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Basic AI recommendations
-                        </span>
-                      </td>
-                      <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--cross"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          No AI assistance
-                        </span>
+                        <div class="specs__cell-content">
+                          <span
+                            class="specs__icon specs__icon--cross"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="specs__feature-text"
+                            >Moderate speeds</span
+                          >
+                        </div>
                       </td>
                     </tr>
 
                     <tr class="specs__row">
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--check"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Seamless integration
-                        </span>
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--check"></span>
+                          <span class="specs__feature-text"
+                            >Advanced AI insights</span
+                          >
+                        </div>
                       </td>
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--cross"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Restricts customization
-                        </span>
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--check"></span>
+                          <span class="specs__feature-text"
+                            >Basic AI recommendations</span
+                          >
+                        </div>
                       </td>
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--cross"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Steep learning curve
-                        </span>
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--cross"></span>
+                          <span class="specs__feature-text"
+                            >No AI assistance</span
+                          >
+                        </div>
                       </td>
                     </tr>
 
                     <tr class="specs__row">
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--check"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Advanced AI insights
-                        </span>
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--check"></span>
+                          <span class="specs__feature-text"
+                            >Seamless integration</span
+                          >
+                        </div>
                       </td>
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--check"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Basic AI insights
-                        </span>
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--check"></span>
+                          <span class="specs__feature-text"
+                            >Restricts customization</span
+                          >
+                        </div>
                       </td>
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--cross"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          No AI assistance
-                        </span>
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--cross"></span>
+                          <span class="specs__feature-text"
+                            >Steep learning curve</span
+                          >
+                        </div>
                       </td>
                     </tr>
 
                     <tr class="specs__row">
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--check"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Ultra-fast browsing
-                        </span>
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--check"></span>
+                          <span class="specs__feature-text"
+                            >Advanced AI insights</span
+                          >
+                        </div>
                       </td>
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--check"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">Fast browsing</span>
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--cross"></span>
+                          <span class="specs__feature-text"
+                            >Basic AI insights</span
+                          >
+                        </div>
                       </td>
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--cross"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Moderate speeds
-                        </span>
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--cross"></span>
+                          <span class="specs__feature-text"
+                            >No AI assistance</span
+                          >
+                        </div>
                       </td>
                     </tr>
 
                     <tr class="specs__row">
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--check"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Full UTF-8 support
-                        </span>
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--check"></span>
+                          <span class="specs__feature-text"
+                            >Ultra-fast browsing</span
+                          >
+                        </div>
                       </td>
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--cross"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Potential display errors
-                        </span>
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--check"></span>
+                          <span class="specs__feature-text">Fast browsing</span>
+                        </div>
                       </td>
                       <td class="specs__cell">
-                        <span
-                          class="specs__icon specs__icon--cross"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="specs__feature-text">
-                          Partial UTF-8 support
-                        </span>
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--cross"></span>
+                          <span class="specs__feature-text"
+                            >Moderate speeds</span
+                          >
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr class="specs__row">
+                      <td class="specs__cell">
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--check"></span>
+                          <span class="specs__feature-text"
+                            >Full UTF-8 support</span
+                          >
+                        </div>
+                      </td>
+                      <td class="specs__cell">
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--cross"></span>
+                          <span class="specs__feature-text"
+                            >Potential display errors</span
+                          >
+                        </div>
+                      </td>
+                      <td class="specs__cell">
+                        <div class="specs__cell-content">
+                          <span class="specs__icon specs__icon--cross"></span>
+                          <span class="specs__feature-text"
+                            >Partial UTF-8 support</span
+                          >
+                        </div>
                       </td>
                     </tr>
                   </tbody>
@@ -480,6 +468,5 @@
 
     <!-- main JS -->
     <script src="src/js/main.js"></script>
-
   </body>
 </html>
