@@ -355,3 +355,100 @@
 .section--specs .specs__body td:first-child .specs__icon {
   background-color: $color-primary-accent;
 }
+
+/* =====================================================
+   Section 3 — How it works (Map Your Success)
+   ===================================================== */
+
+.section--howitworks .howitworks__top-divider {
+  height: 1px;
+  background: $color-border-subtle;
+  margin-bottom: $space-xxxl; // 80px 
+}
+
+
+/* -----------------------------------------------------
+   Header (title + CTA)
+----------------------------------------------------- */
+
+.section--howitworks .section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $space-xxxl; // 80px
+}
+
+.section--howitworks .section__title {
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: $font-size-h2;
+  line-height: $line-height-h2;
+  letter-spacing: $letter-spacing-h2;
+}
+
+.section--howitworks .section__actions {
+  flex-shrink: 0;
+}
+
+/* -----------------------------------------------------
+   Steps list (3-up layout)
+----------------------------------------------------- */
+
+.section--howitworks .howitworks__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; 
+}
+
+.section--howitworks .howitworks__item {
+  border-top: 1px solid $color-border-subtle;
+  padding: 60px 0 20px 0; 
+  min-width: 0;
+}
+
+/* -----------------------------------------------------
+   Step number (01 / 02 / 03)
+----------------------------------------------------- */
+
+.section--howitworks .howitworks__number {
+  display: block;
+  margin-bottom: 60px; // distance to content
+  white-space: nowrap;
+
+  font-family: $font-family-body;
+  font-weight: $font-weight-step-number;
+  font-size: $font-size-step-number;
+  line-height: $line-height-step-number;
+  letter-spacing: $letter-spacing-step-number;
+  color: $color-border-light;
+}
+
+/* -----------------------------------------------------
+   Step content
+----------------------------------------------------- */
+
+.section--howitworks .howitworks__title {
+  margin: 0 0 20px 0;
+
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: $font-size-h3;
+  line-height: $line-height-h3;
+  letter-spacing: $letter-spacing-h3;
+}
+
+.section--howitworks .howitworks__text {
+  margin: 0;
+
+  font-family: $font-family-body;
+  font-weight: 400;
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+  letter-spacing: $letter-spacing-body;
+  color: $color-text-muted;
+}
+
