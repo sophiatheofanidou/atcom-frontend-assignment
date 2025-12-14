@@ -14,6 +14,23 @@
   margin: 3rem 0 3rem; 
 }
 
+/* =====================================================
+   Fix mobile overflow — Header H1
+   ===================================================== */
+
+
+@media (max-width: ($breakpoint-md - 1)) {
+  .site-header__title {
+    font-size: 3.5rem;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    /*prevent horizontal overflow */
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
+
+
 // Section title (See the Big Picture, Why Choose Area, Map Your Success)
 // Figma: H2 - Crimson Text 60px, 90%, -3%
 .section__title {

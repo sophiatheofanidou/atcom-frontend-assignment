@@ -144,6 +144,19 @@ textarea {
   margin: 3rem 0 3rem;
 }
 
+/* =====================================================
+   Fix mobile overflow — Header H1
+   ===================================================== */
+@media (max-width: 767px) {
+  .site-header__title {
+    font-size: 3.5rem;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    /*prevent horizontal overflow */
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
 .section__title {
   font-family: "Crimson Text", serif;
   font-size: 3.75rem;
