@@ -451,6 +451,82 @@
 }
 
 /* =====================================================
+   Responsive patches
+   ===================================================== */
+
+/* specs responsive */
+
+/* keep scroll behavior on <= tablet/small desktop when needed */
+@media (max-width: ($breakpoint-lg - 1px)) {
+  .section--specs .specs__table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* no desktop overlay on scroll layout */
+  .section--specs .specs__table-wrapper::before {
+    content: none;
+  }
+
+  /* keep full table width, scroll inside wrapper */
+  .section--specs .specs__table {
+    min-width: 75rem; /* 1200px */
+  }
+}
+
+/* mobile/tablet: fix header padding + centering */
+@media (max-width: ($breakpoint-md - 1px)) {
+  .section--specs .section__header {
+    max-width: none;            /* don't constrain to 1200 on mobile */
+    margin-inline: 0;           /* avoid centering issues */
+    padding: $space-xxl $space-lg; /* 48px 24px */
+    gap: $space-lg;             /* 24px */
+
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* divider between col 1 and col 2 (header + body) */
+.section--specs .specs__row--head th:first-child {
+  border-right: 0.5px solid $color-border-light;
+}
+
+.section--specs .specs__body td:first-child {
+  border-right: 0.5px solid $color-border-subtle;
+}
+
+/* very small mobile: no sticky first col (it hides other columns) */
+@media (max-width: ($breakpoint-sm - 1px)) {
+  .section--specs .specs__row--head th:first-child,
+  .section--specs .specs__body td:first-child {
+    position: static; /* behave normally */
+    background: transparent;
+    z-index: auto;
+    box-shadow: none;
+  }
+}
+
+/* tablet and up: sticky first col is useful */
+@media (min-width: $breakpoint-md) {
+  .section--specs .specs__row--head th:first-child,
+  .section--specs .specs__body td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: $color-surface;
+  }
+}
+
+/* tablet: reduce header side padding (desktop has 240px) */
+@media (min-width: $breakpoint-md) and (max-width: ($breakpoint-lg - 1px)) {
+  .section--specs .section__header {
+    padding: 5rem 3rem; /* 80px 48px */
+  }
+}
+
+
+/* =====================================================
    Section 3 — How it works (Map Your Success)
    ===================================================== */
 
