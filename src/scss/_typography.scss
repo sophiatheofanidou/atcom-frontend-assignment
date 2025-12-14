@@ -162,3 +162,34 @@ p {
   font-weight: $font-weight-step-number;
   color: $color-border-subtle; // γκρι αριθμοί όπως στο Figma
 }
+
+/* =====================================================
+   Footer
+   ===================================================== */
+
+.site-footer__inner {
+  padding-block: $space-xl; /* 32px */
+}
+
+/* Divider should match other section dividers: full width inside container */
+.site-footer__divider {
+  height: 1px;
+  background-color: $color-border-subtle;
+  margin: 0 0 $space-xl 0; /* 32px bottom only */
+}
+
+.site-footer__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0;
+
+  font-family: $font-family-meta;   /* Roboto Mono */
+  font-size: $font-size-meta;       /* 12px */
+  line-height: $line-height-meta;
+  letter-spacing: $letter-spacing-meta;
+
+  color: $color-primary-accent;     /* green */
+}
+
