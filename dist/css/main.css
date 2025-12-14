@@ -755,7 +755,7 @@ p {
 }
 /* divider between col 1 and col 2 (header + body) */
 .section--specs .specs__row--head th:first-child {
-  border-right: 0.5px solid #cecece;
+  border-right: 0;
 }
 
 .section--specs .specs__body td:first-child {
@@ -772,8 +772,7 @@ p {
     box-shadow: none;
   }
 }
-/* tablet and up: sticky first col is useful */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .section--specs .specs__row--head th:first-child,
   .section--specs .specs__body td:first-child {
     position: sticky;

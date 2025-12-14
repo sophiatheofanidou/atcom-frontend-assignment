@@ -488,7 +488,7 @@
 
 /* divider between col 1 and col 2 (header + body) */
 .section--specs .specs__row--head th:first-child {
-  border-right: 0.5px solid $color-border-light;
+  border-right: 0;
 }
 
 .section--specs .specs__body td:first-child {
@@ -506,8 +506,7 @@
   }
 }
 
-/* tablet and up: sticky first col is useful */
-@media (min-width: $breakpoint-md) {
+@media (min-width: $breakpoint-md) and (max-width: ($breakpoint-lg - 1px)) {
   .section--specs .specs__row--head th:first-child,
   .section--specs .specs__body td:first-child {
     position: sticky;
