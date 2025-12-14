@@ -171,7 +171,7 @@
 }
 
 /* =====================================================
-   Responsive patches
+   Section 1 - Responsive patches
    ===================================================== */
 
 /* Mobile: < md (e.g. < 768px) */
@@ -451,10 +451,9 @@
 }
 
 /* =====================================================
-   Responsive patches
+   Section 2 - Responsive patches
    ===================================================== */
 
-/* specs responsive */
 
 /* keep scroll behavior on <= tablet/small desktop when needed */
 @media (max-width: ($breakpoint-lg - 1px)) {
@@ -622,3 +621,76 @@
   color: $color-text-muted;
 }
 
+/* =====================================================
+   Section 3 - Responsive patches
+   ===================================================== */
+
+/* Mobile */
+@media (max-width: ($breakpoint-md - 1px)) {
+  .section--howitworks .section__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-lg;
+    margin-bottom: $space-xxl;
+  }
+
+  .section--howitworks .howitworks__list {
+    grid-template-columns: 1fr;
+    gap: $space-lg;
+  }
+
+  .section--howitworks .howitworks__item {
+    border-top: 1px solid $color-border-subtle;
+    padding: $space-xl 0 $space-md 0;
+  }
+
+  .section--howitworks .howitworks__number {
+    margin-bottom: $space-xl;
+    font-size: clamp(3rem, 12vw, 4rem);
+    line-height: 1;
+  }
+}
+
+/* Tablet */
+@media (min-width: $breakpoint-md) and (max-width: ($breakpoint-lg - 1px)) {
+  .section--howitworks .howitworks__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section--howitworks .howitworks__item {
+    border-top: none;
+    padding: 3rem 0 $space-md 0;
+  }
+
+  /* divider only at row start (01, 03) */
+  .section--howitworks .howitworks__item:nth-child(odd) {
+    border-top: 1px solid $color-border-subtle;
+  }
+
+  .section--howitworks .howitworks__number {
+    margin-bottom: 2.5rem;
+    font-size: clamp(3.5rem, 6vw, 5rem);
+    line-height: 1;
+  }
+}
+
+/* Header: behave like tablet from small screens up */
+@media (min-width: $breakpoint-sm) and (max-width: ($breakpoint-lg - 1px)) {
+  .section--howitworks .section__header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-lg;
+    margin-bottom: $space-xxxl;
+  }
+}
+
+/* Very small screens */
+@media (max-width: ($breakpoint-sm - 1px)) {
+  .section--howitworks .section__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-lg;
+    margin-bottom: $space-xxl;
+  }
+}
